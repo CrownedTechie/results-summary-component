@@ -1,0 +1,221 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+:root {
+    /* primary colours */
+    --Lightred: hsl(0, 100%, 67%);
+    --Orangeyyellow: hsl(39, 100%, 56%);
+    --Greenteal: hsl(166, 100%, 37%);
+    --Cobaltblue: hsl(234, 85%, 45%);
+
+    /* gradients */
+    --Lightslateblue: hsl(252, 100%, 67%); 
+    --Lightroyalblue: hsl(241, 81%, 54%);
+
+    --Violetblue: hsla(256, 72%, 46%, 1);
+    --Persianblue: hsla(241, 72%, 46%, 0);
+
+    /* neutral */
+    --White: hsl(0, 0%, 100%);
+    --Paleblue: hsl(221, 100%, 96%);
+    --Lightlavender: hsl(241, 100%, 89%);
+    --Darkgrayblue: hsl(224, 30%, 27%);
+
+    /* font weights*/
+    --Medium: 500;
+    --Bold: 700;
+    --Extrabold: 800;
+}
+
+body {
+    margin: 0;
+    font-size: 18px;
+    height: 100vh;
+}
+
+.result {
+    background: linear-gradient( var(--Lightslateblue), var(--Lightroyalblue) 90%);
+    width: 100%;
+    text-align: center;
+    padding-top: .5rem;
+    padding-bottom: 1.5rem;
+    border-radius: 0 0 1.8em 1.8em;
+}
+
+.title {
+    font-size: 1.1em;
+}
+
+.result p {
+    color: var(--Lightlavender);
+    padding: 0 2.55em;
+    line-height: 1.4;
+}
+
+.result h2 {
+    color: var(--White);
+    font-size: 1.2em;
+    font-weight: var(--Medium);
+    margin-top: 2em;
+    margin-bottom: -.35em;
+}
+
+.circle {
+    border-radius: 50%;
+    background: linear-gradient( var(--Violetblue), var(--Persianblue));
+    width: 6.9em; height: 6.9em;
+    margin: -1em auto;
+}
+
+.circle h1 {
+    font-size: 2.8em;
+    color: var(--White);
+    font-weight: var(--Bold);
+    padding-top: .4em;
+}
+
+.circle p {
+    margin-top:-2.8em;
+    font-size: .8em;
+}
+
+.summary {
+    padding: 0 2em;
+}
+
+.summary h3 {
+    color: var(--Darkgrayblue);
+}
+
+.part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .8em;
+    width: 100%;
+    margin: 1em auto;
+    border-radius: .5em;
+    font-size: .9em;
+    font-weight: var(--Extrabold);
+    position: relative;
+}
+
+.part div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    gap: .8em;
+}
+
+.reaction {
+    background-color: hsla(0, 100%, 67%, 0.15);
+    color: var(--Lightred);
+}
+
+.memory {
+    background-color: hsla(39, 100%, 56%, 0.1);
+    color: var(--Orangeyyellow);
+}
+
+.verbal {
+    background-color: hsla(166, 100%, 37%, 0.1);
+    color: var(--Greenteal);
+}
+
+.visual {
+    background-color: hsl(234, 85%, 45%, 0.1);
+    color: var(--Cobaltblue);
+}
+
+.scores {
+    display: inline-flex;
+    align-items: center;
+    gap: .35em;
+}
+
+.scores span {
+    color: var(--Darkgrayblue);
+}
+
+.scores p {
+    display: inline;
+    color: hsla(224, 30%, 27%, 0.5);
+    font-weight: var(--Bold);
+}
+
+button {
+    width: 100%;
+    font-size: 1em;
+    padding: .82em;
+    border: none;
+    border-radius: 2em;
+    color: var(--White);
+    background-color: var(--Darkgrayblue);
+    margin-bottom: 1em;
+}
+
+button:hover {
+    background: linear-gradient(var(--Lightslateblue), var(--Lightroyalblue) 90%);
+}
+
+
+        /* MEDIA QUERY */
+
+@media screen and (min-width: 900px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        display: flex;
+        width: 42%;
+        max-width: 600px;
+        min-width: 600px;
+        background-color: var(--White);
+        box-shadow: 0 2px 15px 5px var(--Paleblue);
+        border-radius: 1.2em;
+    }
+
+    .result {
+        width: 100%;
+        border-radius: 1.2em;
+        padding-bottom: 0;
+        padding: 0 .5em;
+    }
+
+    .result h2 {
+        margin-bottom: 0;
+    }
+
+    .result p {
+        padding: 0 1em;
+    }
+
+    .circle {
+        width: 8.6em;
+        height: 8.6em;
+    }
+
+    .circle h1 {
+        padding-top: .58em;
+        font-size: 3em;
+    }
+
+    .summary {
+        padding: 0 1.4em;
+        width: 90%;
+    }
+
+    .part {
+        padding: 0 .5em;
+    }
+
+    button {
+        font-size: .8em;
+        padding: .85em;
+        margin-bottom: 2em;
+    }
+}
